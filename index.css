@@ -1,0 +1,46 @@
+body{
+    font-family: 'Krona One', sans-serif;
+    color: white;
+    background-color: #151515;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+#mainbody{
+    padding: 2%;
+    width: 70%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+
+#navbar{
+    background-color: #151515;
+    padding-top: 1%;
+    grid-template-columns: auto auto auto auto;
+    padding-bottom: 1%;
+    display: grid;
+    align-content: space-between;
+    text-align: center;
+    border-radius: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+
+
+.kek{
+    color: #5F7998;
+}
+
+.zold{
+    color: #EEFCCE;
+}
+
+#polaroid{
+    max-width: 100%;
+    height: auto;
+}
