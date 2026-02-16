@@ -13,12 +13,17 @@ import TextAreaResize from "./components/TextAreaResize";
 import Footer from './components/Footer';
 import Slider from "./components/Slider";
 
+import { LightRays } from "@/components/ui/light-rays"
+
 
 function App() {
 
 
     return (
         <>
+            <div className="fixed inset-0 z-0 pointer-events-none">
+                <LightRays />
+            </div>
             <div id="mainbody">
                 <div id="navbar">
                     <a href="" className="kek">Crew Media Production</a>
@@ -34,6 +39,7 @@ function App() {
                 <h1 className="kek" id="rolunk">Rólunk</h1>
 
                 <div className="osztottdiv">
+
                     <p id="rolunkp">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh sem, placerat sed dictum eget, venenatis eu arcu. Vestibulum consequat eros dolor, id hendrerit leo tincidunt vitae. Proin id libero sapien. Maecenas quam tellus, mattis in nibh at, rutrum tristique elit. Nunc aliquet vitae sem et consequat. Nullam placerat vel lectus ac pellentesque. Praesent facilisis sagittis augue, at gravida dui suscipit at. Nam fringilla sed dolor ultrices interdum. Quisque suscipit dictum dui, a efficitur nunc ultricies ac. Curabitur vel diam turpis. Maecenas id laoreet ipsum, eu rhoncus enim. Vivamus a blandit odio.
                     </p>
