@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "cim": "kép1",
+        "leiras": "leírás1",
+        "kep": "/polaroid.png"
+    },
+    {
+        "id": 2,
+        "cim": "kép2",
+        "leiras": "leírás2",
+        "kep": "/polaroid.png"
+    },
+    {
+        "id": 3,
+        "cim": "kép3",
+        "leiras": "leírás3",
+        "kep": "/polaroid.png"
+    },
+    {
+        "id": 4,
+        "cim": "kép4",
+        "leiras": "leírás4",
+        "kep": "/polaroid.png"
+    },
+    {
+        "id": 5,
+        "cim": "kép5",
+        "leiras": "leírás5",
+        "kep": "/polaroid.png"
+    }
+]
