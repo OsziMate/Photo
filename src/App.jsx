@@ -86,7 +86,7 @@ function App() {
                         <br />
                         <TextAreaResize />
                     </form>
-                    <img src="public/polaroid.png" alt="Leírás a képről" className="kep" />
+                    <img src="/polaroid.png" alt="Leírás a képről" className="kep" />
                 </div>
 
                 <Footer />
