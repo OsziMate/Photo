@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
 :root {
   --main-bg: #151515;
   --nav-bg: #000000;
@@ -142,6 +149,29 @@ a.kek, a.zold {
 
 .slider-container {
   width: 100%;
+}
+
+.custom-pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #444;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-green);
+  width: 35px;
+  border-radius: 20px;
 }
 
 /* FORM */

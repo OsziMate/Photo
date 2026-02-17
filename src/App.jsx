@@ -24,11 +24,15 @@ function App() {
 
                 <h1 className="kek" id="rolunk">Rólunk</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full md:w-[95%] ml-[12%] mx-auto my-10 items-center">
-                    <p id="rolunkp">
+                <div className="grid grid-cols-1 md:grid-cols-10 gap-10 w-full md:w-[90%] mx-auto my-10 items-center">
+                    <div className='md:col-span-7'>
+                        <p id="rolunkp" className='ml-[10%]'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh sem, placerat sed dictum eget, venenatis eu arcu. Vestibulum consequat eros dolor, id hendrerit leo tincidunt vitae. Proin id libero sapien. Maecenas quam tellus, mattis in nibh at, rutrum tristique elit. Nunc aliquet vitae sem et consequat. Nullam placerat vel lectus ac pellentesque. Praesent facilisis sagittis augue, at gravida dui suscipit at. Nam fringilla sed dolor ultrices interdum. Quisque suscipit dictum dui, a efficitur nunc ultricies ac. Curabitur vel diam turpis. Maecenas id laoreet ipsum, eu rhoncus enim. Vivamus a blandit odio.
-                    </p>
-                    <img src="/polaroid.png" alt="Leírás a képről" className="kep" />
+                        </p>
+                    </div>
+                    <div className='md:col-span-3'>
+                        <img src="/polaroid.png" alt="Leírás a képről" className="kep" />
+                    </div>         
                 </div>
 
                 <h1 className='kek' id="projektek">Korábbi Projektek</h1>
@@ -62,7 +66,7 @@ function App() {
                 <h1 id="kapcsolat">Felkeltettük érdeklődésed?</h1>
                 <h1>Keress minket bátran!</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-10 gap-10 w-full md:w-[95%] mx-auto my-10 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-10 gap-10 w-full md:w-[90%] mx-auto my-10 items-center">
                     <div className='md:col-span-7'>
                         <form action="">
                         <input type="text" name="name" id="name" placeholder="Neved..." required/>
