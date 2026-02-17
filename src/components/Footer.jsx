@@ -7,36 +7,31 @@ export default function Footer() {
         <span className="outline">E</span>G!
       </h1>
 
-      <table className="elolabtabla">
-        <tr>
-          <td>Instagram</td>
-          <td><a className="kek" href="#rolunk">Rólunk</a></td>
-          <td colSpan="2">Elérhetőség:</td>
-        </tr>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-4/5 mx-auto text-center md:text-left">
 
-        <tr>
-          <td className="kek">Csapattagok instagramja</td>
-          <td><a className="kek" href="#projektek">Projektek</a></td>
-          <td colSpan="2">Szentendre</td>
-        </tr>
+        {/* Instagram */}
+        <div className="md:order-1 order-2">
+          <p className="kek mb-3">Instagram</p>
+          <p>SP</p>
+          <p>Krisz</p>
+          <p>Oszi</p>
+        </div>
 
-        <tr>
-          <td>SP</td>
-          <td><a className="kek" href="#projektek">Projektek</a></td>
-          <td colSpan="2" className="kek">Példaemail@gmail.com</td>
-        </tr>
+        {/* Menü desktop only */}
+        <div className="hidden md:block">
+          <a href="#rolunk" className="kek block">Rólunk</a>
+          <a href="#projektek" className="kek block">Projektek</a>
+          <a href="#kapcsolat" className="kek block">Kapcsolat</a>
+        </div>
 
-        <tr>
-          <td>Krisz</td>
-          <td><a className="kek" href="#kapcsolat">Kapcsolat</a></td>
-          <td><a href="" className="zold">Terms of Use</a></td>
-          <td><a href="" className="zold">Privacy Policy</a></td>
-        </tr>
+        {/* Elérhetőség */}
+        <div className="md:order-3 order-1">
+          <p className="mb-2">Elérhetőség:</p>
+          <p>Szentendre</p>
+          <p className="kek">pelda@email.com</p>
+        </div>
 
-        <tr>
-          <td>Oszi</td>
-        </tr>
-      </table>
+      </div>
     </>
   );
 }

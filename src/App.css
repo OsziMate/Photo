@@ -3,43 +3,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-bg: #151515;
   --nav-bg: #000000;
   --accent-blue: #5F7998;
   --accent-green: #EEFCCE;
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 body {
@@ -47,10 +19,9 @@ body {
   color: white;
   background-color: var(--main-bg);
   margin: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
-/* Elrendezés */
 #mainbody {
   padding: 2%;
   width: 90%;
@@ -63,23 +34,18 @@ h1 {
 }
 
 .kek { color: var(--accent-blue); }
+.zold { color: var(--accent-green); }
 
-a.kek:hover{
-  color: #8fa7c2;
-}
+a.kek:hover { color: #8fa7c2; }
+a.zold:hover { color: #c4d1a5; }
 
-a.zold:hover{
-  color: #c4d1a5;
-}
-
-a.kek, a.zold{
+a.kek, a.zold {
   text-decoration: none;
   transition: 0.2s ease;
 }
 
-.zold { color: var(--accent-green); }
+/* NAVBAR */
 
-/* Navigáció */
 #navbar {
   background-color: var(--nav-bg);
   padding: 1.5% 0;
@@ -91,27 +57,20 @@ a.kek, a.zold{
   margin: 0 auto 5% auto;
 }
 
-#navbar a {
-  text-decoration: none;
-  transition: 0.2s ease;
-  font-size: 0.9rem;
-}
-
 #navbar a:hover {
   transform: scale(1.1);
 }
 
-#navbar a.kek:hover { color: #8fa7c2; }
-#navbar a.zold:hover { color: #c4d1a5; }
+/* HERO */
 
-/* Képek */
 #polaroid {
   max-width: 100%;
-  height: auto;
-  display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 0 20px #ffffff);
+  display: block;
+  filter: drop-shadow(0 0 20px #fff);
 }
+
+/* OSZTOTT DIV */
 
 .osztottdiv {
   display: flex;
@@ -129,13 +88,13 @@ a.kek, a.zold{
 
 .kep {
   flex: 0.6;
-  height: auto;
   max-width: 300px;
   border-radius: 10px;
   filter: drop-shadow(0 0 20px var(--accent-blue));
 }
 
-/* SWIPER SLIDER */
+/* SLIDER */
+
 .slider-container {
   position: relative;
   width: 85%;
@@ -158,56 +117,30 @@ a.kek, a.zold{
 
 .tablakep {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
-.swiper-prev,
-.swiper-next {
+.swiper-prev, .swiper-next {
   position: absolute;
   top: 45%;
-  transform: translateY(-50%);
   font-size: 45px;
   color: var(--accent-blue);
   cursor: pointer;
   z-index: 10;
-  transition: 0.3s;
-  user-select: none;
 }
 
 .swiper-prev { left: -70px; }
 .swiper-next { right: -70px; }
 
-.swiper-prev:hover, .swiper-next:hover {
-  color: white;
-  scale: 1.2;
+.slider-container {
+  width: 100%;
 }
 
-.custom-pagination {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
+/* FORM */
 
-.custom-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #444;
-  opacity: 1;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.custom-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-green);
-  width: 35px;
-  border-radius: 20px;
-}
-
-/* Form és Kapcsolat */
 form {
   flex: 1;
   display: flex;
@@ -216,39 +149,21 @@ form {
 }
 
 input, textarea {
-  border: white 1px solid;
-  font-family: 'Krona One', sans-serif;
-  font-size: 1rem;
+  border: 1px solid white;
   padding: 15px;
-  border-radius: 10px;
-  background-color: #1a1a1a;
+  background: #1a1a1a;
   color: white;
+  border-radius: 10px;
   width: 70%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
-input::placeholder{
-  color: white;
-}
-
-textarea::placeholder{
-  color: white;
-}
-
-#kuldes{
+#kuldes {
   width: 35%;
-  transition: 0.2s ease;
-}
-
-#kuldes:hover{
-  transform: scale(1.1);
   cursor: pointer;
 }
 
-textarea{
-  resize: none;
-}
+/* FOOTER */
 
 .outline {
   color: transparent;
@@ -261,33 +176,90 @@ textarea{
   margin: 80px 0;
 }
 
-/* 7. Táblázat és Lábléc */
-.tabla, .elolabtabla {
+.footer-content {
   width: 90%;
   margin: 0 auto;
-  border-collapse: collapse;
 }
 
-.elolabtabla td {
+.footer-row {
+  display: flex;
+}
+
+.footer-col {
+  flex: 1;
   padding: 15px 5px;
   font-size: 0.8rem;
 }
 
-/* 8. Reszponzivitás (Mobil) */
-@media (max-width: 1024px) {
-  .swiper-prev, .swiper-next {
-    display: none;
+.footer-col.wide {
+  flex: 2;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  #mainbody {
+    width: 100%;
+    padding: 20px;
   }
 
-  .osztottdiv {
-    flex-direction: column;
+  h1 {
+    margin-left: 0;
     text-align: center;
   }
 
   #navbar {
-    width: 95%;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
     border-radius: 20px;
+    width: 100%;
+  }
+
+  .osztottdiv {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .kep {
+    max-width: 220px;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+
+  .tablakep {
+    height: 160px;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  #kuldes {
+    width: 100%;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+  }
+
+  .footer-col {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  #elolabcim {
+    margin: 40px 0;
+  }
+
+  .swiper-prev,
+  .swiper-next {
+    display: none;
   }
 }
