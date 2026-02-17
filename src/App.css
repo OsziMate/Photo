@@ -24,7 +24,6 @@ body {
 
 #mainbody {
   padding: 2%;
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -105,14 +104,15 @@ a.kek, a.zold {
 
 .projekt-kartya {
   background: #111;
-  padding: 25px;
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
   border: 1px solid #333;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center; 
+  box-sizing: border-box;
 }
 
 .tablakep {
@@ -121,6 +121,11 @@ a.kek, a.zold {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
+  display: block;
+}
+
+.swiper-slide {
+  height: auto !important;
 }
 
 .swiper-prev, .swiper-next {
@@ -154,7 +159,7 @@ input, textarea {
   background: #1a1a1a;
   color: white;
   border-radius: 10px;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -228,10 +233,6 @@ input, textarea {
 
   .slider-container {
     width: 100%;
-  }
-
-  .tablakep {
-    height: 160px;
   }
 
   input, textarea {
