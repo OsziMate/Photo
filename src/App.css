@@ -216,16 +216,34 @@ form {
 }
 
 input, textarea {
-  border: #333 1px solid;
+  border: white 1px solid;
   font-family: 'Krona One', sans-serif;
   font-size: 1rem;
   padding: 15px;
   border-radius: 10px;
   background-color: #1a1a1a;
-  color: lightgray;
+  color: white;
   width: 70%;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+input::placeholder{
+  color: white;
+}
+
+textarea::placeholder{
+  color: white;
+}
+
+#kuldes{
+  width: 35%;
+  transition: 0.2s ease;
+}
+
+#kuldes:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 textarea{

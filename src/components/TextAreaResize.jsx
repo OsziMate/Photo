@@ -22,6 +22,7 @@ export default function TextAreaResize() {
       style={{ resize: "none", overflow: "hidden" }}
       rows={4}
       placeholder="Írd le röviden mivel keresnél meg minket, és mi felvesszük veled a kapcsolatot!"
+      required
     />
   );
 }

@@ -22,10 +22,10 @@ function App() {
     return (
         <>
             <div className="fixed inset-0 z-0 pointer-events-none">
-                <LightRays />
+                <LightRays count={12} color="rgb(143, 167, 194, 0.65)" blur={96} speed={8} length="200vh" />
             </div>
             <div id="mainbody">
-                <div id="navbar">
+                <div id="navbar" className='relative z-10'>
                     <a href="" className="kek">Crew Media Production</a>
                     <a href="#rolunk" className="zold">Rólunk</a>
                     <a href="#projektek" className="zold">Projektek</a>
@@ -46,7 +46,7 @@ function App() {
                     <img src="/polaroid.png" alt="Leírás a képről" className="kep" />
                 </div>
 
-                <h1 className="kek" id="projektek">Korábbi Projektek</h1>
+                <h1 className='kek' id="projektek">Korábbi Projektek</h1>
                 <Slider
                     data={projektAdatok}
                     prevId="projekt-prev"
@@ -60,7 +60,7 @@ function App() {
                     )}
                 />
 
-                <h1 className="kek">Mivel foglalkozunk?</h1>
+                <h1 className='kek'>Mivel foglalkozunk?</h1>
                 <Slider
                     data={kategoriaAdatok}
                     prevId="kat-prev"
@@ -80,16 +80,18 @@ function App() {
 
                 <div className="osztottdiv">
                     <form action="">
-                        <input type="text" name="name" id="name" placeholder="Neved..." />
+                        <input type="text" name="name" id="name" placeholder="Neved..." required/>
                         <br />
-                        <input type="text" name="phone" id="phone" placeholder="Telefonszámod..." />
+                        <input type="text" name="phone" id="phone" placeholder="Telefonszámod..." required/>
                         <br />
                         <TextAreaResize />
+                        <br />
+                        <input type='submit' id="kuldes"/>
                     </form>
                     <img src="/polaroid.png" alt="Leírás a képről" className="kep" />
                 </div>
 
-                <Footer />
+                <Footer className="relative z-10" />
 
             </div>
         </>
